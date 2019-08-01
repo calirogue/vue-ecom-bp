@@ -7,11 +7,12 @@ export const TEMP_USER_ID = "user_id";
 // Router
 export const ROUTE_NAME_LOGIN = "login";
 export const ROUTE_NAME_SHOP = "shop";
+export const ROUTE_NAME_ITEM = "item";
 export const ROUTE_NAME_ABOUT = "about";
 export const ROUTE_NAME_HOME = "home";
 export const ROUTE_NAME_SORT = "sort";
+export const ROUTE_NAME_SORTED = "sorted";
 export const ROUTE_NAME_CONTACT = "contact";
-export const ROUTE_NAME_ITEM = "item";
 export const ROUTE_NAME_CART = "cart";
 export const ROUTE_NAME_REGISTER = "register";
 export const ROUTE_NAME_SELL = "sell";

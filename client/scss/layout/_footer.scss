@@ -1,0 +1,23 @@
+footer.footer {
+  margin-top: 40px;
+  padding: 12px 0px;
+  background: #ecedef;
+  .copyright {
+    font-size: 14px;
+    color: $color-black;
+  }
+  .nav-item {
+    a {
+      color: $color-black;
+      &:hover {
+        color: $link-color-hover;
+      }
+    }
+    &.nav-social {
+      a {
+        color: $color-purple;
+        padding: .5rem 1.5rem;
+      }
+    }
+  }
+}

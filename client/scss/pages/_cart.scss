@@ -1,0 +1,50 @@
+#cart-page,
+#checkout-page {
+  hr {
+    margin: 60px 0;
+  }
+  
+  .cart-item {
+    margin-bottom: 30px;
+    .photo,
+    .description {
+      @include respond-below(sm) {
+        margin-bottom: 20px;
+      }
+    }
+    .quantity,
+    .price,
+    .subtotal {
+      margin: 0 20px;
+    }
+    .subtotal {
+      font-weight: 700;
+      color: $color-purple;
+      margin-right: 0;
+    }
+    .quantity {
+      width: 42px;
+      height: 42px;
+      text-align: center;
+    }
+  }
+  .form-group {
+    margin-bottom: 0;
+  }
+  .total {
+    line-height: 18px;
+    span {
+      margin-left: 50px;
+      font-size: 18px;
+      @include respond-below(sm) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .remove {
+    color: $color-gray;
+    .fa {
+      margin-right: 5px;
+    }
+  }
+}

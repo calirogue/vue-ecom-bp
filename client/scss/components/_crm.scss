@@ -1,0 +1,62 @@
+.recent-samples{
+  .row{
+    h4{
+      font-weight: 600;
+    }
+    .light{
+      font-weight: 100;
+    }
+  }
+}
+
+.crm-checkbox{
+  line-height: 1;
+
+  label {
+    &:before{
+      margin-right: 0px;
+    }
+  }
+}
+
+.order-list{
+  .order-item{
+    overflow: hidden;
+    .order-top-bar{
+      padding: 15px 0px;
+      background: $color-medium-gray;
+      margin-bottom: 10px;
+    }
+    .order-details{
+      animation: 0.5s all ease-in;
+      height: 0px;
+    }
+
+    .on-open{
+      display: none;
+    }
+
+    .not-open{
+      display: inline-block;
+    }
+
+    &.open{
+      .order-top-bar{
+        background: #fff;
+        border-bottom: 2px solid $color-light-gray;
+      }
+      .order-details{
+        height: auto; 
+      }
+      .on-open{
+        display: inline-block;
+      }
+      .not-open{
+        display: none;
+      }
+    }
+
+
+
+  }
+}

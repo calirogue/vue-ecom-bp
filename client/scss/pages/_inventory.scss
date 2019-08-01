@@ -1,0 +1,29 @@
+#profile-page {
+    .title {
+      margin-bottom: 70px;
+    }
+    .tabs {
+      background-color: $color-light-gray;
+      padding-top: 90px;
+      padding-bottom: 0;
+      position: relative;
+      .profile-pic {
+        position: absolute;
+        margin: auto;
+        right: 0;
+        left: 0;
+        top: -84.5px;
+        width: 169px;
+        height: 169px;
+      }
+      .orders {
+        .accordion-body {
+          div {
+            @include respond-below(sm) {
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }

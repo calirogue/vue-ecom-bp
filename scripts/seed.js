@@ -1,5 +1,7 @@
 const User = require("../server/models/user");
 const Item = require("../server/models/item");
+const Sort = require("../server/models/sort");
+
 const faker = require("faker");
 const path = require("path");
 const fs = require("fs-extra");
@@ -32,4 +34,14 @@ exports.items = async () => {
   );
   const items = JSON.parse(file);
   return Item.insertMany(items);
+};
+
+exports.sorts = async () => {
+  await Sort.deleteMany({});
+  const file = await fs.readFile(
+    path.join(__dirname, "seed_sort_data.json"),
+    "utf8"
+  );
+  const sorts = JSON.parse(file);
+  return Sort.insertMany(sorts);
 };

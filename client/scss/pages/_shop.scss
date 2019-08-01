@@ -1,0 +1,65 @@
+.shop {
+  .subnav {
+    transition: .2s all linear;
+    padding-top: 20px;
+    width: 230px;
+    @include respond-below(sm) {
+      width: 100%;
+    }
+    .subnav-item {
+      cursor: pointer;
+      position: relative;
+      border: 1px solid rgba(33, 37, 41, 0.05);
+      &:after {
+        content: '+';
+        position: absolute;
+        color: $color-gray;
+        font-size: 50px;
+        font-weight: 100;
+        top: -18px;
+        right: 15px;
+        cursor: pointer;
+        padding: 10px;
+      }
+      fieldset{
+        padding: 20px 0px 0;
+        .filter-title{
+          margin-bottom: 24px;
+          font-weight: bold;
+          text-align: center;
+          padding-right: 24px;
+        }
+      }
+      .checkboxes {
+        display: none;
+        padding: 0px 50px;
+      }
+      &.open {
+        fieldset{
+          padding: 20px 0px;
+        }
+
+        &:after {
+          content: '\2013';
+        }
+        .checkboxes {
+          display: block;
+        }
+      }
+      legend {
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+    }
+    &.sticky {
+      position: fixed;
+      top: 0;
+      right: 0;
+      z-index: 10000;
+    }
+  }
+  .products {
+    margin-bottom: 60px;
+  }
+}

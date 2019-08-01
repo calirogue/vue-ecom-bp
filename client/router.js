@@ -14,6 +14,7 @@ import {
   ROUTE_NAME_ABOUT,
   ROUTE_NAME_EDIT,
   ROUTE_NAME_SORT,
+  ROUTE_NAME_SORTED,
   ROUTE_NAME_CONTACT
 } from "@/constants";
 
@@ -39,9 +40,9 @@ export default new Router({
       component: () => import("@views/About")
     },
     {
-      path: "/southern-grown-cannabis",
-      name: ROUTE_NAME_SORT,
-      component: () => import("@views/Sort")
+      path: "/sorts/:id",
+      name: ROUTE_NAME_SORTED,
+      component: () => import("@views/Sorted")
     },
     {
       path: "/contact",
@@ -52,6 +53,11 @@ export default new Router({
       path: "/items/:id",
       name: ROUTE_NAME_ITEM,
       component: () => import("@views/Item")
+    },
+    {
+      path: "/sort",
+      name: ROUTE_NAME_SORT,
+      component: () => import("@views/Sort")
     },
     {
       path: "/cart",

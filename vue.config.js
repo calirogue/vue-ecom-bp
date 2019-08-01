@@ -11,6 +11,7 @@ module.exports = {
       .set("@", path.join(__dirname, "./client"))
       .set("@components", path.join(__dirname, "client", "components"))
       .set("@assets", path.join(__dirname, "client", "assets"))
+      .set("@scss", path.join(__dirname, "client", "scss"))
       .set("@views", path.join(__dirname, "client", "views"));
   },
   devServer: {

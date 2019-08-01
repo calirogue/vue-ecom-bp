@@ -31,7 +31,7 @@
         :to="{ name: ROUTE_NAME_SORT }"
         class="purple--text"
       >
-        Marijuana Sort |
+        Sort |
       </router-link>
       <router-link
         :to="{ name: ROUTE_NAME_CONTACT }"
@@ -56,7 +56,7 @@ export default {
     ROUTE_NAME_SHOP,
     ROUTE_NAME_SORT,
     ROUTE_NAME_CONTACT
-    })
+  })
 };
 </script>
 <style scoped lang="stylus">

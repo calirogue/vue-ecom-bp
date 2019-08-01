@@ -1,0 +1,42 @@
+.tabs-menu {
+  background: $color-light-gray;
+  padding-top: 70px;
+  margin-top: -50px;
+  ul {
+    li {
+      display: inline-block;
+      width: 223px;
+      text-align: center;
+      font-weight: 700;
+      @include respond-below(md) {
+        width: auto;
+      }
+      a,
+      a:visited,
+      a:active {
+        color: $color-black;
+        display: block;
+        text-transform: uppercase;
+        padding: 20px;
+        background-color: $color-light-gray;
+        text-decoration: none;
+        &:hover {
+          color: $color-black;
+        }
+      }
+    }
+  }
+
+  .tab-content {
+    background: white;
+    section {
+      p {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.tablist-reponsiveScroll {
+  overflow-x: auto;
+}

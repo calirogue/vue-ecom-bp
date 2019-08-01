@@ -1,0 +1,96 @@
+.top-banner {
+  background: $color-purple url("/images/home-hero2.jpg") no-repeat top left;
+  background-size: 100%;
+  position: relative;
+  height: 640px;
+  @include respond-below(lg) {
+    background-size: cover;
+  }
+  @include respond-below(md) {
+    margin-left: 0;
+  }
+
+  .top-logo {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #fff;
+    max-width: 100px;
+    @include respond-above(sm) {
+      max-width: 140px;
+    }
+  }
+
+  .row {
+    height: 640px;
+    margin: 0px;
+    @include respond-below(sm) {
+      height: 420px;
+    }
+    h1 {
+      font-weight: 700;
+      font-size: 6.5em;
+      line-height: 92px;
+      @include respond-below(md) {
+        font-size: 4.8em;
+        line-height: 72px;
+      }
+      @include respond-below(sm) {
+        display: none;
+      }
+    }
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 22px;
+    display: block;
+    text-align: center;
+    white-space: normal;
+    padding: 0.375rem 4rem;
+    border-radius: 0px;
+
+    &:hover {
+      background: $color-purple;
+      border-color: $color-purple;
+    }
+  }
+
+  .social-links {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 0px;
+    a {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 60px;
+      text-align: center;
+      background: $color-purple;
+      color: #fff;
+      &:hover {
+        background: $color-purple-hover;
+      }
+    }
+  }
+
+  &.no-after {
+    &:after {
+      display: none;
+    }
+
+    .row {
+      @include respond-below(md) {
+        height: auto;
+      }
+    }
+  }
+}

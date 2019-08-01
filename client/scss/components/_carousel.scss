@@ -1,0 +1,47 @@
+.carousel-item img {
+  width: 470px;
+  height: auto;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  bottom: 0;
+  top: auto;
+  width: 76px;
+  height: 76px;
+  background: $color-purple;
+  opacity: 1;
+  &:hover {
+    background: $color-purple-hover;
+  }
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.201366 1.34019L1.50331 0L11.7988 9.99968L1.50331 20L0.201366 18.6595L9.11592 9.99968L0.201366 1.34019Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.7986 1.34019L10.4967 0L0.201172 9.99968L10.4967 20L11.7986 18.6595L2.88408 9.99968L11.7986 1.34019Z' fill='white'/%3E%3C/svg%3E");
+}
+
+.carousel-indicators {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  margin-top: 30px;
+  img {
+    width: 100px;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+  li {
+    width: 100px;
+    height: 100px;
+    border: none;
+    margin: 0 10px;
+    &.active {
+      opacity: .5;
+    }
+  }
+}

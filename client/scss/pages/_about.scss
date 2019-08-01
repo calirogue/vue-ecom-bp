@@ -1,0 +1,141 @@
+.about-us {
+  .row {
+    @include respond-above(lg) {
+      height: 392px;
+    }
+  }
+  .box {
+    padding: 20px;
+    @include respond-above(lg) {
+      padding: 0px 60px 0 60px;
+    }
+    @include respond-above(xl) {
+      padding: 0px 106px 0 106px;
+    }
+  }
+  h3 {
+    @include respond-above(md) {
+      margin-bottom: 75px;
+    }
+  }
+  img {
+    position: relative;
+    width: 100%;
+    &:after {
+      content: '';
+      position: absolute;
+      background: $color-purple;
+      width: 76px;
+      height: 76px;
+    }
+    .open {
+      &:after {
+        content: '-';
+      }
+    }
+  }
+}
+
+#about-page {
+  .team-container {
+    .team {
+      .bg-purple {
+        padding: 0px 24px;
+        @include respond-above(sm) {
+          padding-left: 20%;
+          padding-right: 5%;
+        }
+
+        @include respond-above(sm) {
+          padding-left: 30%;
+          padding-right: 10%;
+        }
+      }
+      h2 {
+        padding-top: 32px;
+        color: $color-soft-purple;
+        margin-bottom: 48px;
+      }
+      .team-name {
+        font-size: 3em;
+        font-weight: 300;
+        line-height: 1.5;
+        position: relative;
+        &:before {
+          content: "";
+          background: rgba(255, 255, 255, 0.5);
+          height: 1px;
+          width: 25%;
+          display: block;
+          position: absolute;
+          left: -40%;
+          top: 50%;
+        }
+      }
+      .team-position {
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 48px;
+      }
+
+      .team-bio {
+        line-height: 2;
+        margin-bottom: 32px;
+      }
+
+      .team-image {
+        background-position: center center;
+        background-size: cover;
+        min-height: 400px;
+      }
+
+      .team-socials {
+        a {
+          color: #fff;
+          margin-right: 24px;
+        }
+        padding-bottom: 96px;
+      }
+
+      .team-index {
+        display: inline-block;
+        position: absolute;
+        bottom: 0px;
+        right: 15px;
+        background: $color-purple;
+        color: #fff;
+        width: 102px;
+        height: 72px;
+        line-height: 72px;
+        text-align: center;
+      }
+
+      .team-pager {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        a {
+          color: #fff;
+          font-size: 24px;
+          width: 76px;
+          height: 76px;
+          display: inline-block;
+          text-align: center;
+          line-height: 76px;
+          &:hover {
+            background-color: $color-purple-hover;
+          }
+        }
+      }
+    }
+  }
+  .our-lifestyle {
+    h2 {
+      margin-bottom: 80px;
+    }
+    .banner-text-container {
+      background: none;
+    }
+  }
+}

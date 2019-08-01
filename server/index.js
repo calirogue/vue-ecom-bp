@@ -17,6 +17,7 @@ app.use(bodyParser.json());
 
 app.use("/items", require("./routes/items"));
 app.use("/users", require("./routes/users"));
+app.use("/sorts", require("./routes/sorts"));
 
 app.use("/public", express.static(path.join(__dirname, "..", "public")));
 if (NODE_ENV === "production") {

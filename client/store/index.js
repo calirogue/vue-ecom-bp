@@ -5,10 +5,12 @@ import VuexORMAxios from "@vuex-orm/plugin-axios";
 import http from "@/store/http";
 import createPersistedState from "vuex-persistedstate";
 import User from "@/store/models/User";
+import Sort from "@/store/models/Sort";
 
 const database = new VuexORM.Database();
 database.register(Item, item);
 database.register(User, {});
+database.register(Sort, {});
 
 VuexORM.use(VuexORMAxios, {
   database,

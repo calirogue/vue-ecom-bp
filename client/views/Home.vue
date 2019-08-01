@@ -3,45 +3,34 @@
   <v-layout :class="{ 'ma-4': $vuetify.breakpoint.smAndUp, 'ma-0': $vuetify.breakpoint.xsOnly }"
             column
   >
-    <v-layout>
-      <h1>Do well. Be easy.</h1>
-    </v-layout>
-    <v-divider class="mt-2 mb-4" />
-    <v-layout>
-      <v-container
-        fluid
-        grid-list-lg
-        class="px-0"
-      >
-        <!-- <v-layout
-          row
-          wrap
-          class="item-summaries"
-        >
-          <ItemSummary
-            v-for="item in items"
-            :key="item.id"
-            :item="item"
-          />
-        </v-layout> -->
+    <v-flex xs12 sm12 md12>
+      <v-container class="top-banner">
+        <div class="row align-items-center justify-content-end">
+          <div class="col-md-6">
+            <h1 class="text-white">
+              Do well.
+              <br>Be easy.
+            </h1>
+          </div>
+        </div>
+        <!-- <div class="social-links">
+          <a href="https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/11xifarm/?hl=en">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/11xibrand/">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </div> -->
       </v-container>
-    </v-layout>
+    </v-flex>
   </v-layout>
 </template>
 <script>
-import ItemSummary from "@components/ItemSummary";
-import Item from "@/store/models/Item";
+
 export default {
-  name: "Home",
-  components: {
-    ItemSummary
-  },
-  computed: {
-    items: () => Item.all()
-  },
-  created () {
-    Item.$fetch();
-    // GET http://localhost:8080/items
-  }
+  name: "Home"
 };
 </script>

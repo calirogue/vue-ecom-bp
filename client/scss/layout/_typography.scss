@@ -1,0 +1,58 @@
+strong {
+  font-weight: 700;
+}
+
+h1,
+h2 {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 61px;
+  font-size: 64px;
+  color: $color-black;
+  margin-bottom: 30px;
+  @include respond-below(md) {
+    line-height: 44px;
+    font-size: 46px;
+  }
+  @include respond-below(sm) {
+    line-height: 34px;
+    font-size: 36px;
+  }
+
+  &.small{
+    font-size: 48px;
+    font-weight: 600;
+  }
+  &.smaller {
+    font-size: 36px;
+    font-weight: 700;
+    @include respond-below(sm) {
+      font-size: 26px;
+    }
+  }
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+h3,
+.purple-link {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 1em;
+  color: $color-black;
+  text-transform: uppercase;
+  @include respond-below(md) {
+    font-size: 16px;
+    letter-spacing: 10px;
+  }
+}
+
+p {
+  line-height: 29px;
+}

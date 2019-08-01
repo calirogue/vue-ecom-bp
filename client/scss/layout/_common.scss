@@ -1,0 +1,140 @@
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body,
+html {
+  background-color: white;
+  font-family: $font-family;
+  font-size: $font-size;
+  color: $color-black;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+a:visited,
+a:active {
+  color: $link-color;
+  text-decoration: $link-decoration;
+  transition: .1s all linear;
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: $link-decoration-hover;
+    cursor: pointer;
+  }
+}
+
+a.text-black {
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.container {
+  &.align-right {
+    margin: 0 0 0 auto;
+    @include respond-below(sm) {
+      margin: auto;
+    }
+  }
+  &.align-left {
+    @include respond-above(md) {
+      margin: 0 auto 0 0;
+    }
+  }
+}
+
+.smile-purple {
+  color: $color-purple;
+  font-size: 20em;
+  line-height: 1;
+  font-weight: bold;
+  text-align: center;
+}
+
+.bg-purple {
+  background: $color-purple;
+}
+
+.button {
+  font-family: $button-font;
+  font-weight: $button-font-weight;
+  padding: $button-padding;
+  background-color: $button-background-color;
+  color: $button-font-color !important;
+  font-size: $button-font-size;
+  text-transform: $button-text-transform;
+  border: $button-border;
+  transition: $button-transition;
+  display: inline-block;
+  text-transform: uppercase;
+  border-radius: 4px;
+  &:hover {
+    color: $button-font-color-hover !important;
+    background-color: $button-background-color-hover;
+    color: $button-font-color-hover;
+    border: $button-border-hover;
+    text-decoration: none;
+  }
+}
+
+.h100 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+}
+
+.img-logo {
+  max-width: 80px;
+  @include respond-below(lg) {
+    padding-left: 10px;
+  }
+}
+
+.img-table {
+  max-width: 80px;
+}
+
+.bg-image {
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  width: 100%;
+}
+
+.h2bolder {
+  font-size: 4em;
+  font-weight: 700;
+}
+
+.b-left{
+  border-left: 1px solid;
+}
+
+@mixin clearfix {
+  &:after,
+  &:before {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.purple {
+  color: $color-purple;
+}
+
+.gray-bg {
+  background-color: $color-gray;
+}

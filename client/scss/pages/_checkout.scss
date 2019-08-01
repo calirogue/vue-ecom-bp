@@ -1,0 +1,89 @@
+#checkout-page {
+
+  //the cart item styles are defined in the _cart.scss file
+
+  .image-cart{
+    @include respond-below(md) {
+      margin: 0 auto;
+    }
+  }
+
+  .total {
+    @include respond-below(sm) {
+      margin-top: 60px;
+    }
+  }
+
+  h2 {
+    margin-bottom: 30px;
+  }
+
+  .discount-code {
+    margin: 0 30px;
+  }
+
+  .personal-info,
+  .shipping-info,
+  .payment-method {
+    margin-top: 80px;
+    .row {
+      margin-bottom: 30px;
+      @include respond-below(sm) {
+        margin-bottom: 0;
+      }
+    }
+    .floated-label-container {
+      width: 100%;
+    }
+  }
+
+  .payment-method {
+    margin-bottom: 80px;
+    .payment-method-item {
+      cursor: pointer;
+      width: 100%;
+      padding: 25px 55px;
+      font-weight: 600;
+      background: $color-medium-gray;
+      border: 1px solid $color-medium-gray;
+      text-transform: uppercase;
+      @include respond-below(lg) {
+        padding: 10px 25px;
+      }
+
+
+      &.selected{
+        border: 1px solid $color-purple;
+      }
+    }
+    i {
+      font-size: 50px;
+      margin-right: 30px;
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+
+}
+
+#card-element.StripeElement{
+  background: #ecedef;
+  padding: 16px 24px;
+}
+
+.StripeElement--invalid + #card-errors{
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-top: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+
+
+

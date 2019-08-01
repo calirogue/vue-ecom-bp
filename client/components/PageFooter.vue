@@ -21,10 +21,7 @@
             </div>
             <div>
               <!--eslint-disable-next-line max-len-->
-                Located in Southern Oregon, 11:XI cultivates high quality cannabis by using organic soil, pesticide free,
-                handpicked and crafted for different elevated effects. Each strain is cultivated by our expert team of
-                growers who have the expertise to develop a variety of unique and classic strains for your individual
-                needs.
+              Located in Southern Oregon, 11:XI cultivates high quality cannabis by using organic soil, pesticide free, handpicked and crafted for different elevated effects. Each strain is cultivated by our expert team of growers who have the expertise to develop a variety of unique and classic strains for your individual needs.
             </div>
           </v-flex>
           <v-flex

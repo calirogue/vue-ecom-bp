@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Rogue One",
+      "description": "dirt",
+      "image": "",
+      "type": "hybrid",
+      "cbd": 0,
+      "thc": 0,
+      "effects": "Alex",
+      "flavor": "1995 Central Oregon"
+    },
+    {
+      "name": "Rogue two",
+      "description": "mud",
+      "image": "",
+      "type": "hybrid",
+      "cbd": 0,
+      "thc": 0,
+      "effects": "Alex",
+      "flavor": "1995 Central Oregon"
+    }
+  ]
