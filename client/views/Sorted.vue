@@ -32,10 +32,10 @@
                 {{ sort.description }}, {{ sort.type }}
               </h3>
               <h4 class="mb-3 pink--text text--darken-1">
-                {{ sort.cbd }}, {{ sort.thc }}
+                CDB: {{ sort.cbd }} | THC: {{ sort.thc }}
               </h4>
               <h4 class="mb-3 pink--text text--darken-1">
-                {{ sort.effects }}, {{ sort.flavor }}
+                {{ sort.effects }} | {{ sort.flavor }}
               </h4>
             </div>
             <v-divider />

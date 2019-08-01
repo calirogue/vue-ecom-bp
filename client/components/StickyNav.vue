@@ -48,6 +48,7 @@
         <v-icon>shopping_cart</v-icon>
       </v-badge>
     </v-btn>
+    <Header />
   </v-toolbar>
 </template>
 <script>

@@ -3,12 +3,13 @@
     class="fixed-nav"
     flat
     dark
+    right
     color="white"
   >
     <img
       src="/public/logo.png"
     >
-    <v-toolbar-title>
+    <v-toolbar-title class="nav-bar">
       <router-link
         :to="{ name: ROUTE_NAME_HOME }"
         class="purple--text"
@@ -65,5 +66,8 @@ export default {
       height: 34px;
     a
       text-decoration: none;
-      font-weight: 900;
+
+  .nav-bar
+    font-size: 14px;
+
 </style>

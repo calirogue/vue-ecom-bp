@@ -3,34 +3,180 @@
   <v-layout :class="{ 'ma-4': $vuetify.breakpoint.smAndUp, 'ma-0': $vuetify.breakpoint.xsOnly }"
             column
   >
-    <v-flex xs12 sm12 md12>
-      <v-container class="top-banner">
-        <div class="row align-items-center justify-content-end">
-          <div class="col-md-6">
-            <h1 class="text-white">
-              Do well.
-              <br>Be easy.
-            </h1>
-          </div>
-        </div>
-        <!-- <div class="social-links">
-          <a href="https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.instagram.com/11xifarm/?hl=en">
-            <i class="fab fa-instagram"></i>
-          </a>
-          <a href="https://www.facebook.com/11xibrand/">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-        </div> -->
-      </v-container>
-    </v-flex>
+            <v-layout row wrap>
+              <v-flex xs12 sm12 md12>
+                <v-card dark tile flat>
+                    <v-img
+                      :aspect-ratio="16/10"
+                      :src="require('@/images/home-hero2.jpg')"
+                    >
+                      <v-layout pa-2 column fill-height class="lightbox white--text">
+                        <v-spacer></v-spacer>
+                        <v-flex right>
+                          <h1 class="subheading">Do well.<br>
+                          Be easy.
+                          </h1>
+                        </v-flex>
+                        <v-card-actions class="justify-center">
+                          <v-btn
+                            v-for="(social, i) in socials"
+                            :key="i"
+                            :color="social.color"
+                            class="white--text"
+                            fab
+                            icon
+                            href
+                            small
+                          >
+                            <v-icon>{{ social.icon }}</v-icon>
+                          </v-btn>
+                        </v-card-actions>
+
+                      </v-layout>
+                    </v-img>
+                </v-card>
+              </v-flex>
+            </v-layout>
+            <spacer></spacer>
+            <v-container wrap fluid grid-list-lg>
+            <v-layout row wrap>
+              <v-flex xs12 sm6 md6>
+                <v-card dark tile flat color="purple darken-3">
+                  <v-card-text>
+                    <v-img
+                      :aspect-ratio="11/10"
+                      :src="require('@/images/tst2.jpg')"
+                    ></v-img>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 sm6 md6>
+                <v-card dark tile flat color="white darken-3 black--text">
+                  <v-card-text>
+                    <p>
+                      Located in Southern Oregon, 11:XI cultivates high quality cannabis by using organic soil, pesticide free,
+                      handpicked and crafted for different elevated effects. Each strain is cultivated by our expert team of
+                      growers who have the expertise to develop a variety of unique and classic strains for your individual
+                      needs.
+                    </p>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
+
+            <v-flex>
+              <v-card flat tile class="subheading">Most Popular
+              </v-card>
+            </v-flex>
+            <v-spacer></v-spacer>
+            <v-layout row wrap>
+              <v-flex xs12 sm6 md4>
+                <v-card dark tile color="blue darken-3">
+                  <v-card-text>
+                    <p>blue</p>
+                    <v-img
+                      :aspect-ratio="11/10"
+                      :src="require('@/images/tst2.jpg')"
+                    ></v-img>
+                      <v-btn
+                        name="wm"
+                        large
+                        color="blue-grey darken-4 white--text"
+                        class="elevation-0 ma-0"
+                      >
+                        WM
+                      </v-btn>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 sm6 md4>
+                <v-card dark tile color="purple darken-3 black--text">
+                  <v-card-text>
+                    <p>purple</p>
+                    <v-img
+                      :aspect-ratio="11/10"
+                      :src="require('@/images/tst2.jpg')"
+                    ></v-img>
+                      <v-btn
+                        name="wm"
+                        large
+                        color="blue-grey darken-4 white--text"
+                        class="elevation-0 ma-0"
+                      >
+                        WM
+                      </v-btn>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+              <v-flex xs12 sm6 md4>
+                <v-card dark tile color="white darken-3 black--text">
+                  <v-card-text>
+                    <p>test</p>
+                    <v-img
+                      :aspect-ratio="11/10"
+                      :src="require('@/images/tst2.jpg')"
+                    ></v-img>
+                      <v-btn
+                        name="wm"
+                        large
+                        color="blue-grey darken-4 white--text"
+                        class="elevation-0 ma-0"
+                      >
+                        WM
+                      </v-btn>
+                  </v-card-text>
+                </v-card>
+              </v-flex>
+            </v-layout>
+          </v-container>
+
   </v-layout>
 </template>
 <script>
-
-export default {
-  name: "Home"
+  export default {
+    data: () => ({
+      socials: [
+      {
+        icon: "fab fa-facebook",
+        color: "indigo",
+        href: "https://www.facebook.com/11xibrand/"
+      },
+      {
+        icon: "fab fa-linkedin",
+        color: "cyan darken-1"
+      },
+      {
+        icon: "fab fa-instagram",
+        color: "red lighten-3"
+      }
+    ]
+  })
 };
 </script>
+
+<style lang="scss" scoped>
+    h1 {
+      font-weight: 700;
+      font-size: 6.5em;
+      left: 300px;
+      position: relative;
+    }
+
+  .social-links {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 0px;
+    a {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 60px;
+      text-align: center;
+      color: #fff;
+    }
+  }
+</style>
