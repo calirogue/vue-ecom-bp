@@ -37,12 +37,12 @@
                 </v-card>
               </v-flex>
             </v-layout>
-            <spacer></spacer>
+
             <v-container wrap fluid grid-list-lg>
             <v-layout row wrap>
               <v-flex xs12 sm6 md6>
-                <v-card dark tile flat color="purple darken-3">
-                  <v-card-text>
+                <v-card dark tile flat color="grey lighten-2">
+                  <v-card-text class="align-center">
                     <v-img
                       :aspect-ratio="11/10"
                       :src="require('@/images/tst2.jpg')"
@@ -65,8 +65,8 @@
             </v-layout>
 
             <v-flex>
-              <v-card flat tile class="subheading">Most Popular
-              </v-card>
+              <v-card-actions flat tile class="subheading justify-center">Most Popular
+              </v-card-actions>
             </v-flex>
             <v-spacer></v-spacer>
             <v-layout row wrap>
@@ -76,7 +76,7 @@
                     <p>blue</p>
                     <v-img
                       :aspect-ratio="11/10"
-                      :src="require('@/images/tst2.jpg')"
+                      :src="require('@/images/bluedream.jpg')"
                     ></v-img>
                       <v-btn
                         name="wm"
@@ -84,7 +84,7 @@
                         color="blue-grey darken-4 white--text"
                         class="elevation-0 ma-0"
                       >
-                        WM
+                        More info
                       </v-btn>
                   </v-card-text>
                 </v-card>
@@ -95,7 +95,7 @@
                     <p>purple</p>
                     <v-img
                       :aspect-ratio="11/10"
-                      :src="require('@/images/tst2.jpg')"
+                      :src="require('@/images/purplecookies.jpg')"
                     ></v-img>
                       <v-btn
                         name="wm"
@@ -103,7 +103,7 @@
                         color="blue-grey darken-4 white--text"
                         class="elevation-0 ma-0"
                       >
-                        WM
+                        More info
                       </v-btn>
                   </v-card-text>
                 </v-card>
@@ -114,7 +114,7 @@
                     <p>test</p>
                     <v-img
                       :aspect-ratio="11/10"
-                      :src="require('@/images/tst2.jpg')"
+                      :src="require('@/images/mickeykush.jpg')"
                     ></v-img>
                       <v-btn
                         name="wm"
@@ -122,7 +122,7 @@
                         color="blue-grey darken-4 white--text"
                         class="elevation-0 ma-0"
                       >
-                        WM
+                        More info
                       </v-btn>
                   </v-card-text>
                 </v-card>
@@ -178,5 +178,11 @@
       text-align: center;
       color: #fff;
     }
+  }
+
+  .subheading {
+    line-height: 70px;
+    font-size: 30px;
+    font-weight: 700;
   }
 </style>

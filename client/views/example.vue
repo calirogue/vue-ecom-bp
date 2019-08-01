@@ -122,3 +122,66 @@ export default {
   mounted() {}
 };
 </script>
+
+
+
+
+
+
+    <div class="section our-lifestyle">
+      <div class="container">
+        <h2>Our lifestyle</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="banner-small" style="background-image: url(/images/barn.jpg)">
+            <div class="banner-text-container">
+              <div class="banner-text large">
+                <div>You don't</div>
+                <div>have to be</div>
+                <div>perfect</div>
+                <div>to be</div>
+                <div>amazing</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="banner-small" style="background-image: url(/images/oregonred.jpg)">
+                <div class="banner-text-container">
+                  <div class="banner-text">
+                    <div>Just be</div>
+                    <div>free</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="banner-small" style="background-image: url(/images/oregonhiking.jpg)">
+                <div class="banner-text-container">
+                  <div class="banner-text">
+                    <div>Do what makes</div>
+                    <div>your soul happy</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br class="d-none d-md-block">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="banner-small" style="background-image: url(/images/about-lifestyle4.jpg)">
+                <div class="banner-text-container">
+                  <div class="banner-text">
+                    <div>Time you enjoy wasting is not</div>
+                    <div>wasted time</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
