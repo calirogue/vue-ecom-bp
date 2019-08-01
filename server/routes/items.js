@@ -15,7 +15,7 @@ const validateItemBody = require("../middleware/validateItemBody");
  * }
  */
 
- /**
+/**
   * @apiDefine ItemRequestBody
    * @apiParam (Request body) {String} title Title of the item
    * @apiParam (Request body) {String} [artist] Item's artist

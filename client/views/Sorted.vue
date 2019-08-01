@@ -54,8 +54,7 @@
                       sm12
                       md6
                       class="pa-3"
-                    >
-                    </v-flex>
+                    />
                     <v-flex
                       sm12
                       md6

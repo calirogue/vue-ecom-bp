@@ -11,13 +11,13 @@
       </div>
       <div class="social-links">
         <a href="https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true">
-          <i class="fab fa-linkedin-in"></i>
+          <i class="fab fa-linkedin-in" />
         </a>
         <a href="https://www.instagram.com/11xifarm/?hl=en">
-          <i class="fab fa-instagram"></i>
+          <i class="fab fa-instagram" />
         </a>
         <a href="https://www.facebook.com/11xibrand/">
-          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-facebook-f" />
         </a>
       </div>
     </div>
@@ -50,7 +50,12 @@
                 needs.
               </p>
               <h3 class="nav-link-about">
-                <router-link to="/about-us" class="nav-link">Expert Team</router-link>
+                <router-link
+                  to="/about-us"
+                  class="nav-link"
+                >
+                  Expert Team
+                </router-link>
               </h3>
             </div>
           </div>
@@ -64,39 +69,54 @@
         <div class="row justify-content-center">
           <div class="col-md-4">
             <div class="product-box">
-              <div class="product-name">Blue Dream</div>
+              <div class="product-name">
+                Blue Dream
+              </div>
               <div class="product-image">
                 <a
                   href="https://weedmaps.com/brands/eleven-eleven-brand/products/eleven-eleven-brand-ii-xi-farm-blue-dream"
                 >
                   <span>More Info</span>
-                  <img src="/images/bluedream.jpg" class="img-fluid">
+                  <img
+                    src="/images/bluedream.jpg"
+                    class="img-fluid"
+                  >
                 </a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="product-box">
-              <div class="product-name">Purple Cookies</div>
+              <div class="product-name">
+                Purple Cookies
+              </div>
               <div class="product-image">
                 <a
                   href="https://weedmaps.com/brands/eleven-eleven-brand/products/eleven-eleven-brand-ii-xi-farm-purple-cookies"
                 >
                   <span>More Info</span>
-                  <img src="/images/purplecookies.jpg" class="img-fluid">
+                  <img
+                    src="/images/purplecookies.jpg"
+                    class="img-fluid"
+                  >
                 </a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
             <div class="product-box">
-              <div class="product-name">Mickey Kush</div>
+              <div class="product-name">
+                Mickey Kush
+              </div>
               <div class="product-image">
                 <a
                   href="https://weedmaps.com/brands/eleven-eleven-brand/products/eleven-eleven-brand-ii-xi-farm-mickey-kush"
                 >
                   <span>More Info</span>
-                  <img src="/images/mickeykush.jpg" class="img-fluid">
+                  <img
+                    src="/images/mickeykush.jpg"
+                    class="img-fluid"
+                  >
                 </a>
               </div>
             </div>
@@ -104,29 +124,28 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-            <router-link to="/marijuana-sort" class="nav-link">View All</router-link>
+            <router-link
+              to="/marijuana-sort"
+              class="nav-link"
+            >
+              View All
+            </router-link>
           </div>
         </div>
       </div>
     </div>
-
   </div>
 </template>
 <script type="text/javascript">
 export default {
   name: "Home",
-  data() {
+  data () {
     return {};
   },
-  methods: {},
-  mounted() {}
+  mounted () {},
+  methods: {}
 };
 </script>
-
-
-
-
-
 
     <div class="section our-lifestyle">
       <div class="container">

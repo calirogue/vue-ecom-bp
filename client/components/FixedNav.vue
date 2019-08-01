@@ -51,7 +51,7 @@ import { ROUTE_NAME_SORT } from "@/constants";
 import { ROUTE_NAME_CONTACT } from "@/constants";
 export default {
   name: "FixedNav",
-  data: () => ({ 
+  data: () => ({
     ROUTE_NAME_HOME,
     ROUTE_NAME_ABOUT,
     ROUTE_NAME_SHOP,

@@ -57,16 +57,17 @@
 <script>
 import {
   ROUTE_NAME_CART,
-  ROUTE_NAME_HOME,
+  ROUTE_NAME_SHOP,
   ROUTE_NAME_SELL,
+  ROUTE_NAME_SORT,
   ROUTE_NAME_PROFILE
 } from "@/constants";
 export default {
   name: "PageFooter",
   computed: {
     links () {
-      const links = [{ text: "Browse", route: ROUTE_NAME_HOME }];
-      links.push({ text: "Shopping cart", route: ROUTE_NAME_CART });
+      const links = [{ text: "Browse", route: ROUTE_NAME_SHOP }];
+      links.push({ text: "Shopping cart", route: ROUTE_NAME_CART }, { text: "Sort", route: ROUTE_NAME_SORT });
       return links;
     }
   }

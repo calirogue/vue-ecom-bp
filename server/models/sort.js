@@ -9,7 +9,7 @@ const SortSchema = mongoose.Schema({
     type: String,
     required: false
   },
-  image:{
+  image: {
     type: String,
     required: false
   },
@@ -33,7 +33,7 @@ const SortSchema = mongoose.Schema({
     type: Array,
     required: false
   },
-  deleted:{
+  deleted: {
     type: Boolean,
     default: false
   }

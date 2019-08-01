@@ -15,7 +15,8 @@ import {
   ROUTE_NAME_EDIT,
   ROUTE_NAME_SORT,
   ROUTE_NAME_SORTED,
-  ROUTE_NAME_CONTACT
+  ROUTE_NAME_CONTACT,
+  ROUTE_NAME_EDITSORT
 } from "@/constants";
 
 export default new Router({
@@ -103,6 +104,12 @@ export default new Router({
       path: "/500",
       name: ROUTE_NAME_INTERNAL_SERVER_ERROR,
       component: () => import("@views/InternalServerError")
+    },
+    {
+      path: "/sorts/:id/edit",
+      name: ROUTE_NAME_EDITSORT,
+      component: () => import("@views/Request"),
+      meta: { auth: ["admin"] }
     },
     {
       path: "/items/:id/edit",
