@@ -2,7 +2,7 @@
     {
       "name": "Rogue One",
       "description": "dirt",
-      "image": "",
+      "image": "/public/images/about-lifestyle4.jpg",
       "type": "hybrid",
       "cbd": 0,
       "thc": 0,
@@ -12,7 +12,7 @@
     {
       "name": "Rogue two",
       "description": "mud",
-      "image": "",
+      "image": "/public/images/bluedream.jpg",
       "type": "hybrid",
       "cbd": 0,
       "thc": 0,

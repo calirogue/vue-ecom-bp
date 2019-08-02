@@ -28,12 +28,12 @@
               class="lightbox white--text"
             >
               <v-spacer />
-              <v-flex right>
+              <!-- <v-flex right>
                 <h1 class="subheading">
                   Do well.<br>
                   Be easy.
                 </h1>
-              </v-flex>
+              </v-flex> -->
               <v-card-actions class="justify-center">
                 <v-btn
                   v-for="(social, i) in socials"
@@ -210,8 +210,7 @@ export default {
     socials: [
       {
         icon: "fab fa-facebook",
-        color: "indigo",
-        href: "https://www.facebook.com/11xibrand/"
+        color: "indigo"
       },
       {
         icon: "fab fa-linkedin",

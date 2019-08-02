@@ -66,7 +66,7 @@
 
  <v-layout wrap row v-for="team, index in teams" v-if="index == showTeam">
       <v-flex xs12 sm6 md6 order-md1 order-xs1>
-        <v-card dark tile flat color="white black--text darken-3">
+        <v-card dark tile flat color="grey black--text lighten-3">
         <h2>Our Team</h2>
         <v-card-text>
           {{ team.name }}
@@ -80,7 +80,7 @@
         </v-card>
       </v-flex>
       <v-flex xs12 sm6 md6 order-md2 order-xs2>
-        <v-card dark tile flat color="white darken-3">
+        <v-card dark tile flat color="grey lighten-3">
           <v-card-text>
             <v-img :aspect-ratio="11/10" :src="team.image" />
           </v-card-text>
@@ -131,7 +131,7 @@
         >
           <v-card>
             <v-img
-              :src="card.src"
+              :src="card.image"
               class="white--text"
               height="200px"
               gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
@@ -163,7 +163,6 @@ export default {
       teams: [
         {
           image: require("@/images/cody.jpg"),
-          // img: "url(\'/images/cody.jpg\')",
           name: "Cody",
           position: "Grow Manager and Cultivation Coordinator",
           bio: "Meet Cody: Raised in the backwoods of New York, the sunny beaches of South Carolina, and the green fields of Oregon. When he's not tending to the growth of our green ladies, you can find him on the disc-golf course, wandering the woods, or playing video games. As a self proclaimed Master of Green-tape, \"I never truly feel like I'm at work when working with our plants. I live to love, laugh, and grow.\"",
@@ -204,11 +203,31 @@ export default {
         }
       ],
       cards: [
-        { title: 'Just be free', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4 },
-        { title: 'Do what makes you happy', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 8 },
-        { title: 'Time you enjoy is not wasted time', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
-        { title: 'Favorited road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
-        { title: 'Dont have to be perfect to be amazing', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 12 },
+        { 
+          title: 'Just be free',
+          image: require("@/images/barn.jpg"),
+          flex: 4 
+        },
+        { 
+        title: 'Do what makes you happy', 
+        image: require("@/images/oregonred.jpg"),
+        flex: 8 
+        },
+        { 
+          title: 'Time you enjoy is not wasted time', 
+          image: require("@/images/tractorpic.jpg"),
+          flex: 6 
+        },
+        { 
+          title: 'Favorited road trips', 
+          image: require("@/images/oregonhiking.jpg"), 
+          flex: 6 
+        },
+        { 
+          title: 'Dont have to be perfect to be amazing', 
+          image: require("@/images/about-lifestyle4.jpg"), 
+          flex: 
+        12 },
       ],
     e1: 0,
     e6: 1

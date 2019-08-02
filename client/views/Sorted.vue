@@ -16,7 +16,7 @@
             sm6
             md4
           >
-            <img :src="sort.image">
+            <v-img :src="sort.image" />
           </v-flex>
           <v-flex
             :class="{ 'pl-4': $vuetify.breakpoint.smAndUp, 'pa-4': $vuetify.breakpoint.xsOnly }"
