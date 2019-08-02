@@ -90,18 +90,18 @@
         <v-card tile flat color="indigo darken-3">
           <v-card flat tile>
                   <v-btn
-                    color="purple darken-4 white--text"
+                    color="black--text"
                     class="elevation-0 mx-0"
                     @click="prevTeam"
                   >
-                    Left
+                    <v-icon>arrow_left</v-icon>
                   </v-btn>
                   <v-btn
-                    color="purple darken-4 white--text"
+                    color="black--text"
                     class="elevation-0 mx-0"
                     @click="nextTeam"
                   >
-                    Right
+                    <v-icon>arrow_right</v-icon>
                   </v-btn>
           </v-card>
         <v-card flat tile md3>

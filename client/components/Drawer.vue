@@ -23,7 +23,7 @@
         </v-list-tile>
         <v-list-tile @click="menus = false">
           <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
+            <v-icon>info</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>
@@ -37,7 +37,7 @@
         </v-list-tile>
         <v-list-tile @click="menus = false">
           <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
+            <v-icon>local_florist</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>
@@ -51,7 +51,7 @@
         </v-list-tile>
         <v-list-tile @click="menus = false">
           <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
+            <v-icon>shop</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>
@@ -65,7 +65,7 @@
         </v-list-tile>
         <v-list-tile @click="menus = false">
           <v-list-tile-action>
-            <v-icon>contact_mail</v-icon>
+            <v-icon>chat</v-icon>
           </v-list-tile-action>
           <v-list-tile-content>
             <v-list-tile-title>
