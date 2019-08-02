@@ -13,27 +13,27 @@
       class="px-5 py-4"
       name="sell"
     >
-      <InputTitle
+      <InputSortName
         :id="id"
-        ref="title"
+        ref="SortName"
         :model="model"
-        :external-errors="titleAPIErrors"
+        :external-errors="sortNameAPIErrors"
         @error="inputErrorStateChange"
         @focus="hideAlert"
       />
       <InputArtist
         :id="id"
-        ref="artist"
+        ref="description"
         :model="model"
         :external-errors="artistAPIErrors"
         @error="inputErrorStateChange"
         @focus="hideAlert"
       />
-      <InputYear
+      <InputArtist
         :id="id"
-        ref="year"
+        ref="type"
         :model="model"
-        :external-errors="yearAPIErrors"
+        :external-errors="artistAPIErrors"
         @error="inputErrorStateChange"
         @focus="hideAlert"
       />
@@ -47,9 +47,33 @@
       />
       <InputPrice
         :id="id"
-        ref="price"
+        ref="cbd"
         :model="model"
         :external-errors="priceAPIErrors"
+        @error="inputErrorStateChange"
+        @focus="hideAlert"
+      />
+      <InputPrice
+        :id="id"
+        ref="thc"
+        :model="model"
+        :external-errors="priceAPIErrors"
+        @error="inputErrorStateChange"
+        @focus="hideAlert"
+      />
+      <InputArtist
+        :id="id"
+        ref="effects"
+        :model="model"
+        :external-errors="artistAPIErrors"
+        @error="inputErrorStateChange"
+        @focus="hideAlert"
+      />
+      <InputArtist
+        :id="id"
+        ref="flavor"
+        :model="model"
+        :external-errors="artistAPIErrors"
         @error="inputErrorStateChange"
         @focus="hideAlert"
       />
@@ -66,7 +90,7 @@
 </template>
 <script>
 import { validationMixin } from "vuelidate";
-import InputTitle from "@components/InputTitle";
+import InputSortName from "@components/InputSortName";
 import InputArtist from "@components/InputArtist";
 import InputYear from "@components/InputYear";
 import InputImage from "@components/InputImage";
@@ -77,7 +101,7 @@ import Sort from "@/store/models/Sort";
 export default {
   name: "SortForm",
   components: {
-    InputTitle,
+    InputSortName,
     InputArtist,
     InputYear,
     InputImage,
@@ -87,8 +111,8 @@ export default {
   data: () => ({
     alertType: null,
     alertMessage: null,
-    titleAPIErrors: [],
-    titleErrorState: false,
+    sortNameAPIErrors: [],
+    sortNameErrorState: false,
     artistAPIErrors: [],
     artistErrorState: false,
     yearAPIErrors: [],
@@ -138,7 +162,7 @@ export default {
       this.$refs.price.validate();
       await this.$nextTick();
       if (
-        !this.titleErrorState &&
+        !this.sortNameErrorState &&
         !this.artistErrorState &&
         !this.yearErrorState &&
         !this.imageErrorState &&

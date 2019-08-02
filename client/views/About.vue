@@ -90,6 +90,46 @@
       </div>
       </v-card>
   </v-layout> -->
+
+  <v-layout row wrap>
+    <v-container>
+      <h2>Our Lifestyle</h2>
+    </v-container>
+    <v-flex xs12 sm12 md12>
+    <v-container
+      fluid
+      grid-list-md
+      pa-2
+    >
+      <v-layout
+        wrap
+      >
+        <v-flex
+          v-for="card in cards"
+          :key="card.title"
+          v-bind="{ [`xs${card.flex}`]: true }"
+        >
+          <v-card>
+            <v-img
+              :src="card.src"
+              class="white--text"
+              height="200px"
+              gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+            >
+              <v-card-title
+                class="fill-height align-end"
+                v-text="card.title"
+              ></v-card-title>
+            </v-img>
+
+            </v-card>
+          </v-flex>
+        </v-layout>
+      </v-container>
+
+    </v-flex>
+  </v-layout>
+
   </v-layout>
 </template>
 
@@ -181,6 +221,13 @@ export default {
           instagram: "https://www.instagram.com/11xifarm/?hl=en",
           facebook: "https://www.facebook.com/11xibrand/"
         }
+      ],
+      cards: [
+        { title: 'Just be free', src: 'https://cdn.vuetifyjs.com/images/cards/house.jpg', flex: 4 },
+        { title: 'Do what makes you happy', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 8 },
+        { title: 'Time you enjoy is not wasted time', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
+        { title: 'Favorited road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
+        { title: 'Dont have to be perfect to be amazing', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 12 },
       ]
     };
   },
