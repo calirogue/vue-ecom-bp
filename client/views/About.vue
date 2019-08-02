@@ -64,32 +64,45 @@
       </v-flex>
     </v-layout>
 
-  <!-- <v-layout row wrap>
-      <v-card class="section team-container pt-0">
-      <div class="row team" v-for="team, index in teams" v-if="index == showTeam">
-        <div class="col-lg-6 pr-md-0">
-          <div class="bg-purple text-white">
-            <h2>OUR TEAM</h2>
-            <div class="team-name">{{ team.name }}</div>
-            <div class="team-position">{{ team.position }}</div>
-            <div class="team-bio">{{ team.bio }}</div>
-            <div class="team-socials">
-            <div class="team-pager">
-              <a href @click.prevent="prevTeam">
-                <i class="fas fa-chevron-left"></i>
-              </a>
-              <a href @click.prevent="nextTeam">
-                <i class="fas fa-chevron-right"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 team-image" :style="'background-image: url('+team.image+')'">
-          <div class="team-index">{{index+1 }} | {{ teams.length }}</div>
-        </div>
-      </div>
-      </v-card>
-  </v-layout> -->
+  <v-layout v-for="team, index in teams" v-if="index == showTeam">
+  <v-card>
+    <v-flex sm6>
+        <h2>Our Team</h2>
+        <v-card-text>
+          {{ team.name }}
+        </v-card-text>
+        <v-card-text>
+          {{ team.position }}
+        </v-card-text>
+        <v-card-text>
+          {{ team.bio }}
+        </v-card-text>
+        <v-card flat tile>
+                <v-btn
+                  color="purple darken-4 white--text"
+                  class="elevation-0 mx-0"
+                  @click="prevTeam"
+                >
+                  Left
+                </v-btn>
+                <v-btn
+                  color="purple darken-4 white--text"
+                  class="elevation-0 mx-0"
+                  @click="nextTeam"
+                >
+                  Right
+                </v-btn>
+        </v-card>
+    </v-flex>
+    <v-flex sm6>
+            <!-- <v-card :style="`background-image: ${team.img}`"> -->
+        <v-card v-bind:style="{ 'background-image': 'url(' + require(team.image) + ')' }">
+        <!-- <v-card flat :style="'background-image: url('+team.image+')'"> -->
+          <v-card-text class="team-index">{{index+1 }} | {{ teams.length }}</v-card-text>
+        </v-card>
+    </v-flex>
+  </v-card>
+  </v-layout>
 
   <v-layout row wrap>
     <v-container>
@@ -143,6 +156,7 @@ export default {
       teams: [
         {
           image: "/images/cody.jpg",
+          // img: "url(\'/images/cody.jpg\')",
           name: "Cody",
           position: "Grow Manager and Cultivation Coordinator",
           bio: "Meet Cody: Raised in the backwoods of New York, the sunny beaches of South Carolina, and the green fields of Oregon. When he's not tending to the growth of our green ladies, you can find him on the disc-golf course, wandering the woods, or playing video games. As a self proclaimed Master of Green-tape, \"I never truly feel like I'm at work when working with our plants. I live to love, laugh, and grow.\"",
@@ -228,7 +242,9 @@ export default {
         { title: 'Time you enjoy is not wasted time', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 6 },
         { title: 'Favorited road trips', src: 'https://cdn.vuetifyjs.com/images/cards/road.jpg', flex: 6 },
         { title: 'Dont have to be perfect to be amazing', src: 'https://cdn.vuetifyjs.com/images/cards/plane.jpg', flex: 12 },
-      ]
+      ],
+    e1: 0,
+    e6: 1
     };
   },
   mounted () {},
