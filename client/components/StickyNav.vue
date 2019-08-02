@@ -1,17 +1,16 @@
 <template>
   <v-toolbar
     dense
-    dark
     fixed
     flat
     height="50px"
-    color="purple darken-2"
+    class="nav-bar"
   >
     <div v-if="$auth.check()">
       Hi {{ $auth.user().name }}! <a
         id="logout"
         href=""
-        class="blue-grey--text text--darken-4"
+        class="logout white--text"
         @click.prevent="logOut"
       >Logout</a>
     </div>
@@ -19,13 +18,13 @@
       Hi! <router-link
         id="login"
         :to="{ name: ROUTE_NAME_LOGIN }"
-        class="blue-grey--text text--darken-1"
+        class="white--text text--lighten-1"
       >
         Sign in
       </router-link> or <router-link
         id="register"
         :to="{ name: 'register' }"
-        class="blue-grey--text text--darken-1"
+        class="white--text text--lighten-1"
       >
         register
       </router-link>.
@@ -43,7 +42,7 @@
         <span
           v-if="cartItems"
           slot="badge"
-          class="text--white"
+          class="white--text text--lighten-1"
         >{{ cartItems }}</span>
         <v-icon>shopping_cart</v-icon>
       </v-badge>
@@ -81,3 +80,10 @@ export default {
   }
 };
 </script>
+
+<style lang="scss" scoped>
+  .nav-bar {
+    background-color: #774b63 !important;
+
+  }
+</style>

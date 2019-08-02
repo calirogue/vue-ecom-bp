@@ -7,36 +7,32 @@
     color="white"
   >
     <img
+      class="logo"
       src="/public/logo.png"
     >
     <v-toolbar-title class="nav-bar">
       <router-link
         :to="{ name: ROUTE_NAME_HOME }"
-        class="purple--text"
       >
         Home |
       </router-link>
       <router-link
         :to="{ name: ROUTE_NAME_ABOUT }"
-        class="purple--text"
       >
         About Us |
       </router-link>
       <router-link
         :to="{ name: ROUTE_NAME_SHOP }"
-        class="purple--text"
       >
         Shop |
       </router-link>
       <router-link
         :to="{ name: ROUTE_NAME_SORT }"
-        class="purple--text"
       >
         Sort |
       </router-link>
       <router-link
         :to="{ name: ROUTE_NAME_CONTACT }"
-        class="purple--text"
       >
         Contact
       </router-link>
@@ -66,8 +62,7 @@ export default {
       height: 34px;
     a
       text-decoration: none;
-
-  .nav-bar
-    font-size: 14px;
+      color: #774b63 !important;
+      font-size: 15px;
 
 </style>

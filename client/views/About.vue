@@ -64,9 +64,9 @@
       </v-flex>
     </v-layout>
 
-  <v-layout v-for="team, index in teams" v-if="index == showTeam">
-  <v-card>
-    <v-flex sm6>
+ <v-layout wrap row v-for="team, index in teams" v-if="index == showTeam">
+      <v-flex xs12 sm6 md6 order-md1 order-xs1>
+        <v-card dark tile flat color="white black--text darken-3">
         <h2>Our Team</h2>
         <v-card-text>
           {{ team.name }}
@@ -77,32 +77,39 @@
         <v-card-text>
           {{ team.bio }}
         </v-card-text>
-        <v-card flat tile>
-                <v-btn
-                  color="purple darken-4 white--text"
-                  class="elevation-0 mx-0"
-                  @click="prevTeam"
-                >
-                  Left
-                </v-btn>
-                <v-btn
-                  color="purple darken-4 white--text"
-                  class="elevation-0 mx-0"
-                  @click="nextTeam"
-                >
-                  Right
-                </v-btn>
         </v-card>
-    </v-flex>
-    <v-flex sm6>
-            <!-- <v-card :style="`background-image: ${team.img}`"> -->
-        <v-card v-bind:style="{ 'background-image': 'url(' + require(team.image) + ')' }">
-        <!-- <v-card flat :style="'background-image: url('+team.image+')'"> -->
-          <v-card-text class="team-index">{{index+1 }} | {{ teams.length }}</v-card-text>
+      </v-flex>
+      <v-flex xs12 sm6 md6 order-md2 order-xs2>
+        <v-card dark tile flat color="white darken-3">
+          <v-card-text>
+            <v-img :aspect-ratio="11/10" :src="team.image" />
+          </v-card-text>
         </v-card>
-    </v-flex>
-  </v-card>
-  </v-layout>
+      </v-flex>
+      <v-flex xs12 sm12 md12 order-md3 order-xs3>
+        <v-card tile flat color="indigo darken-3">
+          <v-card flat tile>
+                  <v-btn
+                    color="purple darken-4 white--text"
+                    class="elevation-0 mx-0"
+                    @click="prevTeam"
+                  >
+                    Left
+                  </v-btn>
+                  <v-btn
+                    color="purple darken-4 white--text"
+                    class="elevation-0 mx-0"
+                    @click="nextTeam"
+                  >
+                    Right
+                  </v-btn>
+          </v-card>
+        <v-card flat tile md3>
+            <v-card-text class="team-index">{{index+1 }} | {{ teams.length }}</v-card-text>
+        </v-card>
+        </v-card>
+      </v-flex>
+ </v-layout>
 
   <v-layout row wrap>
     <v-container>
@@ -155,7 +162,7 @@ export default {
       showTeam: 0,
       teams: [
         {
-          image: "/images/cody.jpg",
+          image: require("@/images/cody.jpg"),
           // img: "url(\'/images/cody.jpg\')",
           name: "Cody",
           position: "Grow Manager and Cultivation Coordinator",
@@ -166,7 +173,7 @@ export default {
           facebook: "https://www.facebook.com/11xibrand/"
         },
         {
-          image: "/images/julee.jpg",
+          image: require("@/images/julee.jpg"),
           name: "Ju'Lee",
           position: "Office/Farm Manager and METRC Compliance",
           bio: "Meet Ju'Lee: Oregon Local who hails from the farming mecca that is Eastern Oregon. Ju'Lee is in charge of daily operations where you can find her anywhere from making sales to dispensaries to working the field. She is truly an integral part of our team.",
@@ -176,7 +183,7 @@ export default {
           facebook: "https://www.facebook.com/11xibrand/"
         },
         {
-          image: "/images/tony.jpg",
+          image: require("@/images/tony.jpg"),
           name: "Tony",
           position: "Business Development",
           bio: "Meet Tony: Hometown: Long Beach, California. Been studying in Eugene since 2016, my hobbies include sports, specifically soccer, music events, and traveling to new places! Speak Spanish and German (for fun!)",
@@ -186,50 +193,10 @@ export default {
           facebook: "https://www.facebook.com/11xibrand/"
         },
         {
-          image: "/images/john.jpg",
+          image: require("@/images/john.jpg"),
           name: "John",
           position: "Business Development",
           bio: "Meet John: Hometown Phoenix Az. Hobbies include music, I play Guitar, Bass Guitar, percussion and a little piano! I have also been working on cars since I was 5 years old. I love camping and hiking as well!",
-          linkedin:
-            "https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true",
-          instagram: "https://www.instagram.com/11xifarm/?hl=en",
-          facebook: "https://www.facebook.com/11xibrand/"
-        },
-        {
-          image: "/images/diegoa.jpg",
-          name: "Diego",
-          position: "Garden and Trim Team Member",
-          bio: "Meet Diego: Diego has been apart of the Cannabis industry for years now and brings his dedication and outstanding work ethic.",
-          linkedin:
-            "https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true",
-          instagram: "https://www.instagram.com/11xifarm/?hl=en",
-          facebook: "https://www.facebook.com/11xibrand/"
-        },
-        {
-          image: "/images/deejay.jpg",
-          name: "Deejay",
-          position: "Garden and Trim Team Member.",
-          bio: "Meet Deejay: Oregon Native who enjoys the outdoors and spending time with her kids.",
-          linkedin:
-            "https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true",
-          instagram: "https://www.instagram.com/11xifarm/?hl=en",
-          facebook: "https://www.facebook.com/11xibrand/"
-        },
-        {
-          image: "/images/bonnie.jpg",
-          name: "Bonnie",
-          position: "Garden and Trim Team Member.",
-          bio: "Meet Bonnie: A true Southern Oregonian who enjoys spending time with her family and kids, exploring Oregon. ",
-          linkedin:
-            "https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true",
-          instagram: "https://www.instagram.com/11xifarm/?hl=en",
-          facebook: "https://www.facebook.com/11xibrand/"
-        },
-        {
-          image: "/images/diegod.jpg",
-          name: "Diego",
-          position: "Technology",
-          bio: "Meet Diego: In charge of backend and frontend development for the web application.",
           linkedin:
             "https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true",
           instagram: "https://www.instagram.com/11xifarm/?hl=en",
