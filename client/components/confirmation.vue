@@ -21,6 +21,7 @@
           src="/public/logo.png"
         />
         Oregon law requires to be 21 or older to enter the website. Do not operate a vehicle or machinery under the influence of this drug. For use only by adults twenty-one years of age and older. Keep out of reach of children.
+        <!-- <v-icon: "fab fa-instagram"></v-icon> -->
         </v-card-text>
 
         <v-divider></v-divider>

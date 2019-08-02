@@ -30,6 +30,20 @@
       </router-link>.
     </div>
     <v-spacer />
+              <v-card-actions>
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://www.instagram.com/11.xibrand/?hl=en">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.facebook.com/11xibrand/">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                </div>
+              </v-card-actions>
+    <v-spacer />
     <v-btn
       v-if="!$auth.check('admin')"
       :to="{ name: ROUTE_NAME_CART }"
@@ -47,7 +61,6 @@
         <v-icon>shopping_cart</v-icon>
       </v-badge>
     </v-btn>
-    <Header />
   </v-toolbar>
 </template>
 <script>
@@ -85,5 +98,24 @@ export default {
   .nav-bar {
     background-color: #774b63 !important;
 
+  }
+
+  .social-links {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    font-size: 0px;
+    a {
+      position: relative;
+      width: 30px;
+      left: -42px;
+      height: 60px;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 14px;
+      line-height: 60px;
+      text-align: center;
+      color: #fff;
+    }
   }
 </style>

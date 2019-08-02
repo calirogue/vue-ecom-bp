@@ -28,25 +28,18 @@
               class="lightbox white--text"
             >
               <v-spacer />
-              <!-- <v-flex right>
-                <h1 class="subheading">
-                  Do well.<br>
-                  Be easy.
-                </h1>
-              </v-flex> -->
               <v-card-actions class="justify-center">
-                <v-btn
-                  v-for="(social, i) in socials"
-                  :key="i"
-                  :color="social.color"
-                  class="white--text"
-                  fab
-                  icon
-                  href
-                  small
-                >
-                  <v-icon>{{ social.icon }}</v-icon>
-                </v-btn>
+                <div class="social-links">
+                  <a href="https://www.linkedin.com/company/eleven-eleven-brand/about/?viewAsMember=true">
+                      <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="https://www.instagram.com/11.xibrand/?hl=en">
+                      <i class="fab fa-instagram"></i>
+                  </a>
+                  <a href="https://www.facebook.com/11xibrand/">
+                      <i class="fab fa-facebook-f"></i>
+                  </a>
+                </div>
               </v-card-actions>
             </v-layout>
           </v-img>
@@ -207,20 +200,7 @@
 <script>
 export default {
   data: () => ({
-    socials: [
-      {
-        icon: "fab fa-facebook",
-        color: "indigo"
-      },
-      {
-        icon: "fab fa-linkedin",
-        color: "cyan darken-1"
-      },
-      {
-        icon: "fab fa-instagram",
-        color: "red lighten-3"
-      }
-    ]
+
   })
 };
 </script>

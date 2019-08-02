@@ -10,7 +10,7 @@
       class="logo"
       src="/public/logo.png"
     >
-    <v-toolbar-title class="nav-bar">
+    <v-toolbar-items class="nav-bar hidden-sm-and-down">
       <router-link
         :to="{ name: ROUTE_NAME_HOME }"
       >
@@ -36,7 +36,7 @@
       >
         Contact
       </router-link>
-    </v-toolbar-title>
+    </v-toolbar-items>
   </v-toolbar>
 </template>
 <script>
@@ -64,5 +64,11 @@ export default {
       text-decoration: none;
       color: #774b63 !important;
       font-size: 15px;
+      line-height: 60px;
+      font-weight: 800;
+      text-align: center;
+      vertical-align: top;
+      display: inline-block;
+      width: 75px;
 
 </style>
